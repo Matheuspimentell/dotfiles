@@ -2,6 +2,11 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# Hydro prompt configs
+set --global hydro_symbol_prompt 
+set --global hydro_color_pwd 6495ED
+set --global hydro_color_git A9FBD7
+
 # Homebrew setup
 if test -d /home/linuxbrew/.linuxbrew # Linux
 	set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
