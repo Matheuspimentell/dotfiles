@@ -13,10 +13,11 @@ config.font_size = 11
 
 -- Tab bar and window decorations
 config.enable_tab_bar = true
+config.tab_bar_at_bottom = true
 config.window_decorations = "TITLE | RESIZE"
 
 -- Set color scheme
-config.color_scheme = 'Panda (Gogh)'
+config.color_scheme = 'rose-pine'
 
 -- User retro style tab bar
 config.use_fancy_tab_bar = false
