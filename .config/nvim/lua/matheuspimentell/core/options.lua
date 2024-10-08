@@ -20,3 +20,15 @@ opt.smartcase = true -- if you include case in search, nvim assumes you want cas
 
 opt.cursorline = true -- highlight current line
 opt.guicursor = "i:block" -- set cursor to block
+
+-- turn on termguicolors for colorscheme to work
+-- (have to be using a true color terminal)
+opt.termguicolors = true
+opt.background = "dark" -- colorschemes that can be light will be made dark
+opt.signcolumn = "yes" -- show sign column so text doesn't shift
+
+-- backspace configs
+opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
+
+-- clipboard
+opt.clipboard:append("unnamedplus") -- use system clipboardas default register
