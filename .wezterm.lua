@@ -24,7 +24,7 @@ config.use_fancy_tab_bar = false
 -- Only show tab bar if more than one tab
 config.hide_tab_bar_if_only_one_tab = true
 
-config.initial_cols = 115
+config.initial_cols = 135
 config.initial_rows = 25
 
 return config

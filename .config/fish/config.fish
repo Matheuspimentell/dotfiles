@@ -3,23 +3,12 @@ if status is-interactive
 end
 
 # Hydro prompt configs
-set --global hydro_symbol_prompt "" 
+set --global hydro_symbol_prompt " "
 set --global hydro_color_pwd 6495ED
 set --global hydro_color_git A9FBD7
 
 # Homebrew setup
-if test -d /home/linuxbrew/.linuxbrew # Linux
-	set -gx HOMEBREW_PREFIX "/home/linuxbrew/.linuxbrew"
-	set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
-	set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/Homebrew"
-else if test -d /opt/homebrew # MacOS
-	set -gx HOMEBREW_PREFIX "/opt/homebrew"
-	set -gx HOMEBREW_CELLAR "$HOMEBREW_PREFIX/Cellar"
-	set -gx HOMEBREW_REPOSITORY "$HOMEBREW_PREFIX/homebrew"
-end
-fish_add_path -gP "$HOMEBREW_PREFIX/bin" "$HOMEBREW_PREFIX/sbin";
-! set -q MANPATH; and set MANPATH ''; set -gx MANPATH "$HOMEBREW_PREFIX/share/man" $MANPATH;
-! set -q INFOPATH; and set INFOPATH ''; set -gx INFOPATH "$HOMEBREW_PREFIX/share/info" $INFOPATH;
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -33,4 +22,3 @@ else
     end
 end
 # <<< conda initialize <<<
-
