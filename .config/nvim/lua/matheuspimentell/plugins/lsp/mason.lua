@@ -19,12 +19,9 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-        "gopls", --  Go
         "lua_ls", -- Lua
         "rust_analyzer", -- Rust
-        "sqls", --  SQL
         "clangd", -- C
-        "pyright", -- Python
       },
     })
   end,

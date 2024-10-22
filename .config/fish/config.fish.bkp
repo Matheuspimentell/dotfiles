@@ -1,0 +1,11 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+end
+
+# Homebrew
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# dotfiles alias
+function dotfiles
+  git --git-dir=$HOME'/.dotfiles' --work-tree $HOME $argv
+end
