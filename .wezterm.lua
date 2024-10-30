@@ -17,7 +17,7 @@ config.tab_bar_at_bottom = true
 config.window_decorations = "TITLE | RESIZE"
 
 -- Set color scheme
-config.color_scheme = 'rose-pine'
+config.color_scheme = 'nightfox'
 
 -- User retro style tab bar
 config.use_fancy_tab_bar = false
