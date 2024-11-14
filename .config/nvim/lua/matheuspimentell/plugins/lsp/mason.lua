@@ -25,6 +25,7 @@ return {
         "clangd", -- C
         "eslint", -- Javascript and Typescript
         "pyright", -- Python
+        "jdtls", -- Java
       },
     })
   end,

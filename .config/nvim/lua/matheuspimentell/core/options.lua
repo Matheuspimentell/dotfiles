@@ -7,12 +7,12 @@ opt.relativenumber = true
 opt.number = true
 
 -- Tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs
-opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.tabstop = 4 -- 2 spaces for tabs
+opt.shiftwidth = 4 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indentation from current line when starting a new one
 
-opt.wrap = false
+opt.wrap = true
 
 -- Search settings
 opt.ignorecase = true -- ignore case when searching
