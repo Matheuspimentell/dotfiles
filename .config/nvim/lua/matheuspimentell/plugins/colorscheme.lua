@@ -1,7 +1,11 @@
 return {
-  "folke/tokyonight.nvim", name = "tokyonight",
+  "tiagovla/tokyodark.nvim", name = "tokyodark",
   priority = 1000,
-  config = function()
-    vim.cmd("colorscheme tokyonight-night")
+  opts = {
+    -- Additional configs here
+  },
+  config = function(_, opts)
+    require("tokyodark").setup(opts)
+    vim.cmd("colorscheme tokyodark")
   end
 }
