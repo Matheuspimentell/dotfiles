@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"
+ZSH_THEME="eastwood"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,7 +105,7 @@ alias python=python3
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias l="ls -aCF"
+alias l="ls -ACF"
 alias vim=nvim
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree $HOME $argv'
 
@@ -139,4 +139,11 @@ zinit light zsh-users/zsh-completions
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completions
+
+export PATH="$PATH:/home/matheuspimentell/development/flutter/bin"
+
+# Add cargo binaries to path
+export PATH="$PATH:/home/matheuspimentell/.cargo/bin"
+
+bindkey $'\n' self-insert
