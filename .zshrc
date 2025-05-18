@@ -107,7 +107,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias l="ls -ACF"
 alias vim=nvim
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree $HOME $argv'
+alias dot='git --git-dir=$HOME/.dotfiles --work-tree $HOME'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -137,15 +137,18 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 
+# nvm path
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completions
 
-export PATH="$PATH:/home/matheuspimentell/development/flutter/bin"
+# neovim path
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
-# Add cargo binaries to path
+# Add cargo (rust) binaries to path
 export PATH="$PATH:/home/matheuspimentell/.cargo/bin"
 
-bindkey $'\n' self-insert
+# Golang path
+export PATH=$PATH:/usr/local/go/bin
 
-eval `ssh-agent -s` >> /dev/null
+bindkey $'\n' self-insert

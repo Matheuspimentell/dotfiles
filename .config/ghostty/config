@@ -1,1 +1,17 @@
+# Font stuff
+font-size = 11
+font-family = GeistMono Nerd Font
+
+# Cursor
+cursor-style = block
+
+# Height of a line
+adjust-cell-height = 10%
+
+# Window related stuff
+window-padding-balance = true
+window-save-state = always
+
+# Theme
 theme = "tokyodark"
+
