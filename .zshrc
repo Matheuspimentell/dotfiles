@@ -108,6 +108,7 @@ alias ....="cd ../../.."
 alias l="ls -ACF"
 alias vim=nvim
 alias dot='git --git-dir=$HOME/.dotfiles --work-tree $HOME'
+alias bat=batcat
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -152,3 +153,23 @@ export PATH="$PATH:/home/matheuspimentell/.cargo/bin"
 export PATH=$PATH:/usr/local/go/bin
 
 bindkey $'\n' self-insert
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/matheuspimentell/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/matheuspimentell/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/matheuspimentell/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/matheuspimentell/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
