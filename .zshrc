@@ -169,7 +169,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Zoxide
 eval "$(zoxide init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias zz=__zoxide_zi
